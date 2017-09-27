@@ -1,0 +1,242 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: .9rem;
+    font-weight: 300;
+    color: #898e92;
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+body {
+    background: #fcfcfc;
+}
+
+h1 {
+    color: #424a50;
+    margin: 60px auto 0;
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+form#searchbox {
+    height: 42px;
+    width: 480px;
+    margin: 40px auto;
+    max-width: 100%;
+}
+
+input#search {
+    height: 42px;
+    width: 480px;
+    border-radius: 5px;
+    text-indent: 15px;
+    font-size: 1rem;
+    max-width: 100%;
+}
+
+#employee-html {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 415px);
+    grid-gap: 40px;
+    justify-content: center;
+    width: calc(100% - 80px);
+    max-width: 1780px;
+    margin: 0 auto 75px;
+}
+
+.div-employee-html {
+    list-style: none;
+    display: inline-block;
+    height: 185px;
+    width: 415px;
+    border: 2px solid #dcdcdc;
+    border-radius: 8px;
+    background: #fff;
+    transition: border 300ms;
+}
+
+.div-employee-html:hover {
+    border: 2px solid #000;
+}
+
+a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    padding: 0 25px;
+}
+
+img {
+    border-radius: 50%;
+    margin-right: 25px;
+    vertical-align: middle;
+}
+
+.div-li {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    position: relative;
+}
+
+.employee-data {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 205px;
+}
+
+p {
+    margin: 1rem 0;
+    word-wrap: break-word;
+}
+
+.name,
+.city,
+.address {
+    text-transform: capitalize;
+}
+
+.name {
+    color: #424a50;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+
+/************************
+OVERLAY STYLES
+************************/
+
+#overlay {
+    background: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+#overlay-wrapper-outer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#overlay-wrapper-inner {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+}
+
+#overlay-html {
+    width: 460px;
+    height: 550px;
+    min-width: 460px;
+    max-width: 90%;
+    background: #fff;
+    margin: auto;
+    border: solid 2px #dfdfdf;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.close-button::before,
+.close-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    background: #424a50;
+    width: 100%;
+}
+
+.close-button::before {
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.close-button::after {
+    transform: translate(0, -50%) rotate(-45deg);
+}
+
+.back-button {
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border-right: 15px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    transform: translate(0, -50%);
+}
+
+.next-button {
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border-left: 15px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    transform: translate(0, -50%);
+}
+
+.div-overlay-html {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.div-overlay-html img {
+    margin: 0;
+    width: 175px;
+    height: 175px;
+}
+
+.employee-data-overlay>* {
+    font-size: 1rem;
+}
+
+.employee-data-overlay .name {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-top: 25px;
+}
+
+.divider {
+    content: '';
+    width: 85%;
+    height: 1px;
+    margin: 35px auto;
+    background: #dfdfdf;
+}
