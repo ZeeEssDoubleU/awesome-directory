@@ -1,4 +1,4 @@
-## Greatest Startup Ever!  
+### Greatest Startup Ever!  
 # Employee Directory
 
 This is a mock company employee directory.  AJAX is used to pull data from a random employee API.
